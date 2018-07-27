@@ -10,14 +10,20 @@ class Cal():
     def mul(self, input_value):
         self.value *= input_value
     def div(self, input_value):
-        self.value /= input_value
+        try:
+            self.value /= input_value
+        except ZeroDivisionError
+            print("0으로 나눌 수 없습니다")
+        finally:
+            print("나누기 실행완료")
+        
 
     
 
 class SafeCal(Cal):
     def __init__(self,value):
         self.value = value
-    def div(self,input_vlaue):
+    def div(self,input_value):
         if(input_value ==0):
             self.value = 0
         else:
@@ -32,5 +38,5 @@ cal1.sub(2)
 cal1.result()
 
 cal2 = SafeCal(0)
-cal2.div(0)
+cal1.div(5)
 cal2.result()
