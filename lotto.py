@@ -13,7 +13,7 @@ today = []
 #start = 0
 #while start<6:
     #today.append(random.randrange(1,46,1))
-    today = random.sample(range(1,47),6)
+today = random.sample(range(1,47),6)
  #   start = start+1
 
 print("오늘의 추천번호는"+ str(today[0])+","
